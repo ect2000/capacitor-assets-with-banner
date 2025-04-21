@@ -239,6 +239,19 @@ export const ANDROID_LAND_XXXHDPI_SCREEN: AndroidOutputAssetTemplateSplash = {
   orientation: Orientation.Landscape,
 };
 
+/**
+ * Splash Android TV 4K (3840×2160), landscape sin escalado por DPI
+ */
+export const ANDROID_TV_3840X2160_SPLASH: AndroidOutputAssetTemplateSplash = {
+  platform: Platform.Android,
+  kind:      AssetKind.Splash,
+  format:    Format.Png,
+  width:     3840,
+  height:    2160,
+  density:   AndroidDensity.Nodpi,
+  orientation: Orientation.Landscape,
+};
+
 export const ANDROID_PORT_LDPI_SCREEN: AndroidOutputAssetTemplateSplash = {
   platform: Platform.Android,
   kind: AssetKind.Splash,
@@ -429,4 +442,17 @@ export const ANDROID_PORT_XXXHDPI_SCREEN_DARK: AndroidOutputAssetTemplateSplash 
   height: 1920,
   density: AndroidDensity.PortXxxhdpiNight,
   orientation: Orientation.Portrait,
+};
+
+/**
+ * Splash Android TV 4K Dark (3840×2160), landscape sin escalado por DPI
+ */
+export const ANDROID_TV_3840X2160_SPLASH_DARK: AndroidOutputAssetTemplateSplash = {
+  platform: Platform.Android,
+  kind:      AssetKind.SplashDark,
+  format:    Format.Png,
+  width:     3840,
+  height:    2160,
+  density:   AndroidDensity.Nodpi,
+  orientation: Orientation.Landscape,
 };

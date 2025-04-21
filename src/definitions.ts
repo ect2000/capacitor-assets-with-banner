@@ -82,6 +82,7 @@ export const enum AndroidDensity {
   LandXhdpi = 'land-xhdpi',
   LandXxhdpi = 'land-xxhdpi',
   LandXxxhdpi = 'land-xxxhdpi',
+  Nodpi = 'nodpi',
   PortLdpi = 'port-ldpi',
   PortMdpi = 'port-mdpi',
   PortHdpi = 'port-hdpi',
