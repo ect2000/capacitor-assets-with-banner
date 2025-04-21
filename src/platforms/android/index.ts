@@ -564,14 +564,16 @@ export class AndroidAssetGenerator extends AssetGenerator {
     await project.commit();
   }
 
-  private async generateBanners (asset: InputAsset, project: Project): Promise<OutputAsset[]> {
+  private async generateBanners(asset: InputAsset, project: Project): Promise<OutputAsset[]> {
     const pipe = asset.pipeline();
 
     if (!pipe) {
       throw new BadPipelineError('Sharp instance not created');
     }
 
-    const banners = Object.values(AndroidAssetTemplates).filter((a) => a.kind === AssetKind.Banner) as AndroidOutputAssetTemplateBanner[];
+    const banners = Object.values(AndroidAssetTemplates).filter(
+      (a) => a.kind === AssetKind.Banner,
+    ) as AndroidOutputAssetTemplateBanner[];
 
     const resPath = this.getResPath(project);
 
@@ -606,7 +608,6 @@ export class AndroidAssetGenerator extends AssetGenerator {
 
     return [dest, outputInfo];
   }
-
 
   private async generateSplashes(asset: InputAsset, project: Project): Promise<OutputAsset[]> {
     const pipe = asset.pipeline();
