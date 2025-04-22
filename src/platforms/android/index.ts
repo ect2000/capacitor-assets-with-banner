@@ -96,7 +96,9 @@ export class AndroidAssetGenerator extends AssetGenerator {
       generated.push(...generatedBanners);
 
       // Generate splashes
-      const splashes = Object.values(AndroidAssetTemplates).filter((a) => a.kind === AssetKind.Splash);
+      const splashes = Object.values(AndroidAssetTemplates).filter(
+        (a): a is AndroidOutputAssetTemplateSplash => a.kind === AssetKind.Splash,
+      );
       const generatedSplashes = await Promise.all(
         splashes.map(async (splash) => {
           return this._generateSplashesFromLogo(
@@ -113,7 +115,9 @@ export class AndroidAssetGenerator extends AssetGenerator {
     }
 
     // Generate dark splashes
-    const darkSplashes = Object.values(AndroidAssetTemplates).filter((a) => a.kind === AssetKind.SplashDark);
+    const darkSplashes = Object.values(AndroidAssetTemplates).filter(
+      (a): a is AndroidOutputAssetTemplateSplash => a.kind === AssetKind.SplashDark,
+    );
     const generatedSplashes = await Promise.all(
       darkSplashes.map(async (splash) => {
         return this._generateSplashesFromLogo(
@@ -242,17 +246,24 @@ export class AndroidAssetGenerator extends AssetGenerator {
   private async _generateSplashesFromLogo(
     project: Project,
     asset: InputAsset,
-    splash: AndroidOutputAssetTemplate,
+    splash: AndroidOutputAssetTemplateSplash,
     pipe: Sharp,
     backgroundColor: string,
   ): Promise<OutputAsset> {
     // Generate light splash
     const resPath = this.getResPath(project);
 
-    let drawableDir = `drawable`;
-    if (splash.density) {
-      drawableDir = `drawable-${splash.density}`;
+    // Build the qualifier array: land/port + density
+    const quals: string[] = [];
+    if (splash.orientation === Orientation.Landscape) {
+      quals.push('land');
+    } else if (splash.orientation === Orientation.Portrait) {
+      quals.push('port');
     }
+    if (splash.density) {
+      quals.push(splash.density);
+    }
+    const drawableDir = quals.length > 0 ? `drawable-${quals.join('-')}` : 'drawable';
 
     const parentDir = join(resPath, drawableDir);
     if (!(await pathExists(parentDir))) {

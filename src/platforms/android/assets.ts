@@ -362,16 +362,6 @@ export const ANDROID_LAND_XHDPI_SCREEN_DARK: AndroidOutputAssetTemplateSplash = 
   orientation: Orientation.Landscape,
 };
 
-export const ANDROID_TV_LAND_XHDPI_3840X2160_XHDPI_SPLASH: AndroidOutputAssetTemplateSplash = {
-  platform: Platform.Android,
-  kind: AssetKind.Splash,
-  format: Format.Png,
-  width: 3840,
-  height: 2160,
-  density: AndroidDensity.LandXhdpiNight, // ← correspondencia con 320dpi
-  orientation: Orientation.Landscape, // si quieres carpeta land‑xhdpi
-};
-
 export const ANDROID_LAND_XXHDPI_SCREEN_DARK: AndroidOutputAssetTemplateSplash = {
   platform: Platform.Android,
   kind: AssetKind.SplashDark,

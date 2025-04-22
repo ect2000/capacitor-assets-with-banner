@@ -38,7 +38,6 @@ export declare const ANDROID_LAND_LDPI_SCREEN_DARK: AndroidOutputAssetTemplateSp
 export declare const ANDROID_LAND_MDPI_SCREEN_DARK: AndroidOutputAssetTemplateSplash;
 export declare const ANDROID_LAND_HDPI_SCREEN_DARK: AndroidOutputAssetTemplateSplash;
 export declare const ANDROID_LAND_XHDPI_SCREEN_DARK: AndroidOutputAssetTemplateSplash;
-export declare const ANDROID_TV_LAND_XHDPI_3840X2160_XHDPI_SPLASH: AndroidOutputAssetTemplateSplash;
 export declare const ANDROID_LAND_XXHDPI_SCREEN_DARK: AndroidOutputAssetTemplateSplash;
 export declare const ANDROID_LAND_XXXHDPI_SCREEN_DARK: AndroidOutputAssetTemplateSplash;
 export declare const ANDROID_PORT_LDPI_SCREEN_DARK: AndroidOutputAssetTemplateSplash;

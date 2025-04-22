@@ -158,10 +158,18 @@ class AndroidAssetGenerator extends asset_generator_1.AssetGenerator {
         var _a, _b, _c, _d, _e, _f, _g;
         // Generate light splash
         const resPath = this.getResPath(project);
-        let drawableDir = `drawable`;
-        if (splash.density) {
-            drawableDir = `drawable-${splash.density}`;
+        // Build the qualifier array: land/port + density
+        const quals = [];
+        if (splash.orientation === "landscape" /* Orientation.Landscape */) {
+            quals.push('land');
         }
+        else if (splash.orientation === "portrait" /* Orientation.Portrait */) {
+            quals.push('port');
+        }
+        if (splash.density) {
+            quals.push(splash.density);
+        }
+        const drawableDir = quals.length > 0 ? `drawable-${quals.join('-')}` : 'drawable';
         const parentDir = (0, path_1.join)(resPath, drawableDir);
         if (!(await (0, utils_fs_1.pathExists)(parentDir))) {
             await (0, utils_fs_1.mkdirp)(parentDir);
