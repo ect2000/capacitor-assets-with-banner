@@ -239,43 +239,25 @@ export const ANDROID_LAND_XXXHDPI_SCREEN: AndroidOutputAssetTemplateSplash = {
   orientation: Orientation.Landscape,
 };
 
-/**
- * Splash Android TV 4K (3840×2160), landscape sin escalado por DPI
- */
-export const ANDROID_TV_LAND_NODPI_3840X2160_SPLASH: AndroidOutputAssetTemplateSplash = {
+// Splash default
+export const ANDROID_TV_3840X2160_DEFAULT_SPLASH: AndroidOutputAssetTemplateSplash = {
   platform: Platform.Android,
   kind: AssetKind.Splash,
   format: Format.Png,
   width: 3840,
   height: 2160,
-  density: AndroidDensity.LandNodpi,
-  orientation: Orientation.Landscape,
+  density: AndroidDensity.Default, // = '' → folder drawable/
+  orientation: Orientation.Default,
 };
-export const ANDROID_TV_NODPI_3840X2160_SPLASH: AndroidOutputAssetTemplateSplash = {
+
+// Splash default landscape
+export const ANDROID_TV_3840X2160_LAND_DEFAULT_SPLASH: AndroidOutputAssetTemplateSplash = {
   platform: Platform.Android,
   kind: AssetKind.Splash,
   format: Format.Png,
   width: 3840,
   height: 2160,
-  density: AndroidDensity.Nodpi,
-  orientation: Orientation.Landscape,
-};
-export const ANDROID_TV_TVDPI_3840X2160_SPLASH: AndroidOutputAssetTemplateSplash = {
-  platform: Platform.Android,
-  kind: AssetKind.Splash,
-  format: Format.Png,
-  width: 3840,
-  height: 2160,
-  density: AndroidDensity.Tvdpi,
-  orientation: Orientation.Landscape,
-};
-export const ANDROID_TV_LAND_TVDPI_3840X2160_SPLASH: AndroidOutputAssetTemplateSplash = {
-  platform: Platform.Android,
-  kind: AssetKind.Splash,
-  format: Format.Png,
-  width: 3840,
-  height: 2160,
-  density: AndroidDensity.LandTvdpi,
+  density: AndroidDensity.Default, // = '' → folder drawable-<nothing> → drawable-land/
   orientation: Orientation.Landscape,
 };
 
@@ -391,6 +373,16 @@ export const ANDROID_LAND_XHDPI_SCREEN_DARK: AndroidOutputAssetTemplateSplash = 
   orientation: Orientation.Landscape,
 };
 
+export const ANDROID_TV_LAND_XHDPI_3840X2160_XHDPI_SPLASH: AndroidOutputAssetTemplateSplash = {
+  platform: Platform.Android,
+  kind: AssetKind.Splash,
+  format: Format.Png,
+  width: 3840,
+  height: 2160,
+  density: AndroidDensity.LandXhdpiNight, // ← correspondencia con 320dpi
+  orientation: Orientation.Landscape, // si quieres carpeta land‑xhdpi
+};
+
 export const ANDROID_LAND_XXHDPI_SCREEN_DARK: AndroidOutputAssetTemplateSplash = {
   platform: Platform.Android,
   kind: AssetKind.SplashDark,
@@ -471,44 +463,24 @@ export const ANDROID_PORT_XXXHDPI_SCREEN_DARK: AndroidOutputAssetTemplateSplash 
   orientation: Orientation.Portrait,
 };
 
-/**
- * Splash Android TV 4K Dark (3840×2160), landscape sin escalado por DPI
- */
-export const ANDROID_TV_3840X2160_SPLASH_DARK: AndroidOutputAssetTemplateSplash = {
+// Splash default
+export const ANDROID_TV_3840X2160_DEFAULT_SPLASH_DARK: AndroidOutputAssetTemplateSplash = {
   platform: Platform.Android,
   kind: AssetKind.SplashDark,
   format: Format.Png,
   width: 3840,
   height: 2160,
-  density: AndroidDensity.Nodpi,
-  orientation: Orientation.Landscape,
+  density: AndroidDensity.Default, // = '' → folder drawable/
+  orientation: Orientation.Default,
 };
 
-export const ANDROID_TV_LAND_3840X2160_SPLASH_DARK: AndroidOutputAssetTemplateSplash = {
+// Splash default landscape
+export const ANDROID_TV_3840X2160_LAND_DEFAULT_SPLASH_DARK: AndroidOutputAssetTemplateSplash = {
   platform: Platform.Android,
   kind: AssetKind.SplashDark,
   format: Format.Png,
   width: 3840,
   height: 2160,
-  density: AndroidDensity.LandNodpi,
-  orientation: Orientation.Landscape,
-};
-export const ANDROID_TV_TVDPI_3840X2160_SPLASH_DARK: AndroidOutputAssetTemplateSplash = {
-  platform: Platform.Android,
-  kind: AssetKind.SplashDark,
-  format: Format.Png,
-  width: 3840,
-  height: 2160,
-  density: AndroidDensity.Tvdpi,
-  orientation: Orientation.Landscape,
-};
-
-export const ANDROID_TV_LANDTVDPI_3840X2160_SPLASH_DARK: AndroidOutputAssetTemplateSplash = {
-  platform: Platform.Android,
-  kind: AssetKind.SplashDark,
-  format: Format.Png,
-  width: 3840,
-  height: 2160,
-  density: AndroidDensity.LandTvdpi,
+  density: AndroidDensity.Default, // = '' → folder drawable-<nothing> → drawable-land/
   orientation: Orientation.Landscape,
 };

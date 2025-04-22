@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ANDROID_TV_TVDPI_3840X2160_SPLASH_DARK = exports.ANDROID_TV_LAND_3840X2160_SPLASH_DARK = exports.ANDROID_TV_3840X2160_SPLASH_DARK = exports.ANDROID_PORT_XXXHDPI_SCREEN_DARK = exports.ANDROID_PORT_XXHDPI_SCREEN_DARK = exports.ANDROID_PORT_XHDPI_SCREEN_DARK = exports.ANDROID_PORT_HDPI_SCREEN_DARK = exports.ANDROID_PORT_MDPI_SCREEN_DARK = exports.ANDROID_PORT_LDPI_SCREEN_DARK = exports.ANDROID_LAND_XXXHDPI_SCREEN_DARK = exports.ANDROID_LAND_XXHDPI_SCREEN_DARK = exports.ANDROID_LAND_XHDPI_SCREEN_DARK = exports.ANDROID_LAND_HDPI_SCREEN_DARK = exports.ANDROID_LAND_MDPI_SCREEN_DARK = exports.ANDROID_LAND_LDPI_SCREEN_DARK = exports.ANDROID_SCREEN_DARK = exports.ANDROID_PORT_XXXHDPI_SCREEN = exports.ANDROID_PORT_XXHDPI_SCREEN = exports.ANDROID_PORT_XHDPI_SCREEN = exports.ANDROID_PORT_HDPI_SCREEN = exports.ANDROID_PORT_MDPI_SCREEN = exports.ANDROID_PORT_LDPI_SCREEN = exports.ANDROID_TV_LAND_TVDPI_3840X2160_SPLASH = exports.ANDROID_TV_TVDPI_3840X2160_SPLASH = exports.ANDROID_TV_NODPI_3840X2160_SPLASH = exports.ANDROID_TV_LAND_NODPI_3840X2160_SPLASH = exports.ANDROID_LAND_XXXHDPI_SCREEN = exports.ANDROID_LAND_XXHDPI_SCREEN = exports.ANDROID_LAND_XHDPI_SCREEN = exports.ANDROID_LAND_HDPI_SCREEN = exports.ANDROID_LAND_MDPI_SCREEN = exports.ANDROID_LAND_LDPI_SCREEN = exports.ANDROID_SCREEN = exports.ANDROID_XXXHDPI_BANNER = exports.ANDROID_XXHDPI_BANNER = exports.ANDROID_XHDPI_BANNER = exports.ANDROID_HDPI_BANNER = exports.ANDROID_MDPI_BANNER = exports.ANDROID_XXXHDPI_ADAPTIVE_ICON = exports.ANDROID_XXHDPI_ADAPTIVE_ICON = exports.ANDROID_XHDPI_ADAPTIVE_ICON = exports.ANDROID_HDPI_ADAPTIVE_ICON = exports.ANDROID_MDPI_ADAPTIVE_ICON = exports.ANDROID_LDPI_ADAPTIVE_ICON = exports.ANDROID_XXXHDPI_ICON = exports.ANDROID_XXHDPI_ICON = exports.ANDROID_XHDPI_ICON = exports.ANDROID_HDPI_ICON = exports.ANDROID_MDPI_ICON = exports.ANDROID_LDPI_ICON = void 0;
-exports.ANDROID_TV_LANDTVDPI_3840X2160_SPLASH_DARK = void 0;
+exports.ANDROID_TV_3840X2160_LAND_DEFAULT_SPLASH_DARK = exports.ANDROID_TV_3840X2160_DEFAULT_SPLASH_DARK = exports.ANDROID_PORT_XXXHDPI_SCREEN_DARK = exports.ANDROID_PORT_XXHDPI_SCREEN_DARK = exports.ANDROID_PORT_XHDPI_SCREEN_DARK = exports.ANDROID_PORT_HDPI_SCREEN_DARK = exports.ANDROID_PORT_MDPI_SCREEN_DARK = exports.ANDROID_PORT_LDPI_SCREEN_DARK = exports.ANDROID_LAND_XXXHDPI_SCREEN_DARK = exports.ANDROID_LAND_XXHDPI_SCREEN_DARK = exports.ANDROID_TV_LAND_XHDPI_3840X2160_XHDPI_SPLASH = exports.ANDROID_LAND_XHDPI_SCREEN_DARK = exports.ANDROID_LAND_HDPI_SCREEN_DARK = exports.ANDROID_LAND_MDPI_SCREEN_DARK = exports.ANDROID_LAND_LDPI_SCREEN_DARK = exports.ANDROID_SCREEN_DARK = exports.ANDROID_PORT_XXXHDPI_SCREEN = exports.ANDROID_PORT_XXHDPI_SCREEN = exports.ANDROID_PORT_XHDPI_SCREEN = exports.ANDROID_PORT_HDPI_SCREEN = exports.ANDROID_PORT_MDPI_SCREEN = exports.ANDROID_PORT_LDPI_SCREEN = exports.ANDROID_TV_3840X2160_LAND_DEFAULT_SPLASH = exports.ANDROID_TV_3840X2160_DEFAULT_SPLASH = exports.ANDROID_LAND_XXXHDPI_SCREEN = exports.ANDROID_LAND_XXHDPI_SCREEN = exports.ANDROID_LAND_XHDPI_SCREEN = exports.ANDROID_LAND_HDPI_SCREEN = exports.ANDROID_LAND_MDPI_SCREEN = exports.ANDROID_LAND_LDPI_SCREEN = exports.ANDROID_SCREEN = exports.ANDROID_XXXHDPI_BANNER = exports.ANDROID_XXHDPI_BANNER = exports.ANDROID_XHDPI_BANNER = exports.ANDROID_HDPI_BANNER = exports.ANDROID_MDPI_BANNER = exports.ANDROID_XXXHDPI_ADAPTIVE_ICON = exports.ANDROID_XXHDPI_ADAPTIVE_ICON = exports.ANDROID_XHDPI_ADAPTIVE_ICON = exports.ANDROID_HDPI_ADAPTIVE_ICON = exports.ANDROID_MDPI_ADAPTIVE_ICON = exports.ANDROID_LDPI_ADAPTIVE_ICON = exports.ANDROID_XXXHDPI_ICON = exports.ANDROID_XXHDPI_ICON = exports.ANDROID_XHDPI_ICON = exports.ANDROID_HDPI_ICON = exports.ANDROID_MDPI_ICON = exports.ANDROID_LDPI_ICON = void 0;
 exports.ANDROID_LDPI_ICON = {
     platform: "android" /* Platform.Android */,
     kind: "icon" /* AssetKind.Icon */,
@@ -210,43 +209,24 @@ exports.ANDROID_LAND_XXXHDPI_SCREEN = {
     density: "land-xxxhdpi" /* AndroidDensity.LandXxxhdpi */,
     orientation: "landscape" /* Orientation.Landscape */,
 };
-/**
- * Splash Android TV 4K (3840×2160), landscape sin escalado por DPI
- */
-exports.ANDROID_TV_LAND_NODPI_3840X2160_SPLASH = {
+// Splash default
+exports.ANDROID_TV_3840X2160_DEFAULT_SPLASH = {
     platform: "android" /* Platform.Android */,
     kind: "splash" /* AssetKind.Splash */,
     format: "png" /* Format.Png */,
     width: 3840,
     height: 2160,
-    density: "land-nodpi" /* AndroidDensity.LandNodpi */,
-    orientation: "landscape" /* Orientation.Landscape */,
+    density: "" /* AndroidDensity.Default */,
+    orientation: "" /* Orientation.Default */,
 };
-exports.ANDROID_TV_NODPI_3840X2160_SPLASH = {
+// Splash default landscape
+exports.ANDROID_TV_3840X2160_LAND_DEFAULT_SPLASH = {
     platform: "android" /* Platform.Android */,
     kind: "splash" /* AssetKind.Splash */,
     format: "png" /* Format.Png */,
     width: 3840,
     height: 2160,
-    density: "nodpi" /* AndroidDensity.Nodpi */,
-    orientation: "landscape" /* Orientation.Landscape */,
-};
-exports.ANDROID_TV_TVDPI_3840X2160_SPLASH = {
-    platform: "android" /* Platform.Android */,
-    kind: "splash" /* AssetKind.Splash */,
-    format: "png" /* Format.Png */,
-    width: 3840,
-    height: 2160,
-    density: "tvdpi" /* AndroidDensity.Tvdpi */,
-    orientation: "landscape" /* Orientation.Landscape */,
-};
-exports.ANDROID_TV_LAND_TVDPI_3840X2160_SPLASH = {
-    platform: "android" /* Platform.Android */,
-    kind: "splash" /* AssetKind.Splash */,
-    format: "png" /* Format.Png */,
-    width: 3840,
-    height: 2160,
-    density: "land-tvdpi" /* AndroidDensity.LandTvdpi */,
+    density: "" /* AndroidDensity.Default */,
     orientation: "landscape" /* Orientation.Landscape */,
 };
 exports.ANDROID_PORT_LDPI_SCREEN = {
@@ -349,6 +329,15 @@ exports.ANDROID_LAND_XHDPI_SCREEN_DARK = {
     density: "land-night-xhdpi" /* AndroidDensity.LandXhdpiNight */,
     orientation: "landscape" /* Orientation.Landscape */,
 };
+exports.ANDROID_TV_LAND_XHDPI_3840X2160_XHDPI_SPLASH = {
+    platform: "android" /* Platform.Android */,
+    kind: "splash" /* AssetKind.Splash */,
+    format: "png" /* Format.Png */,
+    width: 3840,
+    height: 2160,
+    density: "land-night-xhdpi" /* AndroidDensity.LandXhdpiNight */,
+    orientation: "landscape" /* Orientation.Landscape */, // si quieres carpeta land‑xhdpi
+};
 exports.ANDROID_LAND_XXHDPI_SCREEN_DARK = {
     platform: "android" /* Platform.Android */,
     kind: "splash-dark" /* AssetKind.SplashDark */,
@@ -421,42 +410,23 @@ exports.ANDROID_PORT_XXXHDPI_SCREEN_DARK = {
     density: "port-night-xxxhdpi" /* AndroidDensity.PortXxxhdpiNight */,
     orientation: "portrait" /* Orientation.Portrait */,
 };
-/**
- * Splash Android TV 4K Dark (3840×2160), landscape sin escalado por DPI
- */
-exports.ANDROID_TV_3840X2160_SPLASH_DARK = {
+// Splash default
+exports.ANDROID_TV_3840X2160_DEFAULT_SPLASH_DARK = {
     platform: "android" /* Platform.Android */,
     kind: "splash-dark" /* AssetKind.SplashDark */,
     format: "png" /* Format.Png */,
     width: 3840,
     height: 2160,
-    density: "nodpi" /* AndroidDensity.Nodpi */,
-    orientation: "landscape" /* Orientation.Landscape */,
+    density: "" /* AndroidDensity.Default */,
+    orientation: "" /* Orientation.Default */,
 };
-exports.ANDROID_TV_LAND_3840X2160_SPLASH_DARK = {
+// Splash default landscape
+exports.ANDROID_TV_3840X2160_LAND_DEFAULT_SPLASH_DARK = {
     platform: "android" /* Platform.Android */,
     kind: "splash-dark" /* AssetKind.SplashDark */,
     format: "png" /* Format.Png */,
     width: 3840,
     height: 2160,
-    density: "land-nodpi" /* AndroidDensity.LandNodpi */,
-    orientation: "landscape" /* Orientation.Landscape */,
-};
-exports.ANDROID_TV_TVDPI_3840X2160_SPLASH_DARK = {
-    platform: "android" /* Platform.Android */,
-    kind: "splash-dark" /* AssetKind.SplashDark */,
-    format: "png" /* Format.Png */,
-    width: 3840,
-    height: 2160,
-    density: "tvdpi" /* AndroidDensity.Tvdpi */,
-    orientation: "landscape" /* Orientation.Landscape */,
-};
-exports.ANDROID_TV_LANDTVDPI_3840X2160_SPLASH_DARK = {
-    platform: "android" /* Platform.Android */,
-    kind: "splash-dark" /* AssetKind.SplashDark */,
-    format: "png" /* Format.Png */,
-    width: 3840,
-    height: 2160,
-    density: "land-tvdpi" /* AndroidDensity.LandTvdpi */,
+    density: "" /* AndroidDensity.Default */,
     orientation: "landscape" /* Orientation.Landscape */,
 };

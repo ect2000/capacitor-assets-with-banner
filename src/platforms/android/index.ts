@@ -12,7 +12,7 @@ import type {
   AndroidOutputAssetTemplateSplash,
   AndroidOutputAssetTemplateBanner,
 } from '../../definitions';
-import { AssetKind, Platform } from '../../definitions';
+import { AssetKind, Orientation, Platform } from '../../definitions';
 import { BadPipelineError, BadProjectError } from '../../error';
 import type { InputAsset } from '../../input-asset';
 import { OutputAsset } from '../../output-asset';
@@ -642,7 +642,18 @@ export class AndroidAssetGenerator extends AssetGenerator {
     template: AndroidOutputAssetTemplateSplash,
     pipe: Sharp,
   ): Promise<[string, OutputInfo]> {
-    const drawableDir = template.density ? `drawable-${template.density}` : 'drawable';
+    // qualifiers from orientation and density
+    const quals: string[] = [];
+    if (template.orientation === Orientation.Landscape) {
+      quals.push('land');
+    } else if (template.orientation === Orientation.Portrait) {
+      quals.push('port');
+    }
+    if (template.density) {
+      quals.push(template.density);
+    }
+
+    const drawableDir = quals.length > 0 ? `drawable-${quals.join('-')}` : 'drawable';
 
     const resPath = this.getResPath(project);
     const parentDir = join(resPath, drawableDir);

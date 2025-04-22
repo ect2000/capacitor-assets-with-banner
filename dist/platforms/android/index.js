@@ -401,7 +401,20 @@ class AndroidAssetGenerator extends asset_generator_1.AssetGenerator {
         return collected;
     }
     async generateSplash(project, asset, template, pipe) {
-        const drawableDir = template.density ? `drawable-${template.density}` : 'drawable';
+        // qualifiers from orientation and density
+        const quals = [];
+        if (template.orientation === "landscape" /* Orientation.Landscape */) {
+            quals.push('land');
+        }
+        else if (template.orientation === "portrait" /* Orientation.Portrait */) {
+            quals.push('port');
+        }
+        if (template.density) {
+            quals.push(template.density);
+        }
+        const drawableDir = quals.length > 0
+            ? `drawable-${quals.join('-')}`
+            : 'drawable';
         const resPath = this.getResPath(project);
         const parentDir = (0, path_1.join)(resPath, drawableDir);
         if (!(await (0, utils_fs_1.pathExists)(parentDir))) {
