@@ -239,17 +239,6 @@ export const ANDROID_LAND_XXXHDPI_SCREEN: AndroidOutputAssetTemplateSplash = {
   orientation: Orientation.Landscape,
 };
 
-// Splash default
-export const ANDROID_TV_3840X2160_DEFAULT_SPLASH: AndroidOutputAssetTemplateSplash = {
-  platform: Platform.Android,
-  kind: AssetKind.Splash,
-  format: Format.Png,
-  width: 3840,
-  height: 2160,
-  density: AndroidDensity.Default, // = '' → folder drawable/
-  orientation: Orientation.Default,
-};
-
 // Splash default landscape
 export const ANDROID_TV_3840X2160_LAND_DEFAULT_SPLASH: AndroidOutputAssetTemplateSplash = {
   platform: Platform.Android,
@@ -461,17 +450,6 @@ export const ANDROID_PORT_XXXHDPI_SCREEN_DARK: AndroidOutputAssetTemplateSplash 
   height: 1920,
   density: AndroidDensity.PortXxxhdpiNight,
   orientation: Orientation.Portrait,
-};
-
-// Splash default
-export const ANDROID_TV_3840X2160_DEFAULT_SPLASH_DARK: AndroidOutputAssetTemplateSplash = {
-  platform: Platform.Android,
-  kind: AssetKind.SplashDark,
-  format: Format.Png,
-  width: 3840,
-  height: 2160,
-  density: AndroidDensity.Default, // = '' → folder drawable/
-  orientation: Orientation.Default,
 };
 
 // Splash default landscape

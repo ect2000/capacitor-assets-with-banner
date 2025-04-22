@@ -412,9 +412,7 @@ class AndroidAssetGenerator extends asset_generator_1.AssetGenerator {
         if (template.density) {
             quals.push(template.density);
         }
-        const drawableDir = quals.length > 0
-            ? `drawable-${quals.join('-')}`
-            : 'drawable';
+        const drawableDir = quals.length > 0 ? `drawable-${quals.join('-')}` : 'drawable';
         const resPath = this.getResPath(project);
         const parentDir = (0, path_1.join)(resPath, drawableDir);
         if (!(await (0, utils_fs_1.pathExists)(parentDir))) {
