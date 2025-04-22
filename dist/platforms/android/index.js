@@ -166,7 +166,7 @@ class AndroidAssetGenerator extends asset_generator_1.AssetGenerator {
         else if (splash.orientation === "portrait" /* Orientation.Portrait */) {
             quals.push('port');
         }
-        if (splash.density) {
+        if (splash.density && splash.orientation !== "landscape" /* Orientation.Landscape */ && splash.orientation !== "portrait" /* Orientation.Portrait */) {
             quals.push(splash.density);
         }
         const drawableDir = quals.length > 0 ? `drawable-${quals.join('-')}` : 'drawable';

@@ -260,7 +260,7 @@ export class AndroidAssetGenerator extends AssetGenerator {
     } else if (splash.orientation === Orientation.Portrait) {
       quals.push('port');
     }
-    if (splash.density) {
+    if (splash.density && splash.orientation !== Orientation.Landscape && splash.orientation !== Orientation.Portrait) {
       quals.push(splash.density);
     }
     const drawableDir = quals.length > 0 ? `drawable-${quals.join('-')}` : 'drawable';
