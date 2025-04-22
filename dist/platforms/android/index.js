@@ -412,6 +412,7 @@ class AndroidAssetGenerator extends asset_generator_1.AssetGenerator {
         if (template.density) {
             quals.push(template.density);
         }
+        console.log('quals', quals);
         const drawableDir = quals.length > 0 ? `drawable-${quals.join('-')}` : 'drawable';
         const resPath = this.getResPath(project);
         const parentDir = (0, path_1.join)(resPath, drawableDir);
@@ -420,6 +421,7 @@ class AndroidAssetGenerator extends asset_generator_1.AssetGenerator {
         }
         const dest = (0, path_1.join)(resPath, drawableDir, 'splash.png');
         const outputInfo = await pipe.resize(template.width, template.height).png().toFile(dest);
+        console.log('Generated splash at:', dest);
         return [dest, outputInfo];
     }
     getResPath(project) {
