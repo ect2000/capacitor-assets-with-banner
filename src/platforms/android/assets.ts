@@ -242,7 +242,7 @@ export const ANDROID_LAND_XXXHDPI_SCREEN: AndroidOutputAssetTemplateSplash = {
 /**
  * Splash Android TV 4K (3840×2160), landscape sin escalado por DPI
  */
-export const ANDROID_TV_LAND_3840X2160_SPLASH: AndroidOutputAssetTemplateSplash = {
+export const ANDROID_TV_LAND_NODPI_3840X2160_SPLASH: AndroidOutputAssetTemplateSplash = {
   platform: Platform.Android,
   kind: AssetKind.Splash,
   format: Format.Png,
@@ -251,13 +251,31 @@ export const ANDROID_TV_LAND_3840X2160_SPLASH: AndroidOutputAssetTemplateSplash 
   density: AndroidDensity.LandNodpi,
   orientation: Orientation.Landscape,
 };
-export const ANDROID_TV_3840X2160_SPLASH: AndroidOutputAssetTemplateSplash = {
+export const ANDROID_TV_NODPI_3840X2160_SPLASH: AndroidOutputAssetTemplateSplash = {
   platform: Platform.Android,
   kind: AssetKind.Splash,
   format: Format.Png,
   width: 3840,
   height: 2160,
   density: AndroidDensity.Nodpi,
+  orientation: Orientation.Landscape,
+};
+export const ANDROID_TV_TVDPI_3840X2160_SPLASH: AndroidOutputAssetTemplateSplash = {
+  platform: Platform.Android,
+  kind: AssetKind.Splash,
+  format: Format.Png,
+  width: 3840,
+  height: 2160,
+  density: AndroidDensity.Tvdpi,
+  orientation: Orientation.Landscape,
+};
+export const ANDROID_TV_LAND_TVDPI_3840X2160_SPLASH: AndroidOutputAssetTemplateSplash = {
+  platform: Platform.Android,
+  kind: AssetKind.Splash,
+  format: Format.Png,
+  width: 3840,
+  height: 2160,
+  density: AndroidDensity.LandTvdpi,
   orientation: Orientation.Landscape,
 };
 
@@ -473,5 +491,24 @@ export const ANDROID_TV_LAND_3840X2160_SPLASH_DARK: AndroidOutputAssetTemplateSp
   width: 3840,
   height: 2160,
   density: AndroidDensity.LandNodpi,
+  orientation: Orientation.Landscape,
+};
+export const ANDROID_TV_TVDPI_3840X2160_SPLASH_DARK: AndroidOutputAssetTemplateSplash = {
+  platform: Platform.Android,
+  kind: AssetKind.SplashDark,
+  format: Format.Png,
+  width: 3840,
+  height: 2160,
+  density: AndroidDensity.Tvdpi,
+  orientation: Orientation.Landscape,
+};
+
+export const ANDROID_TV_LANDTVDPI_3840X2160_SPLASH_DARK: AndroidOutputAssetTemplateSplash = {
+  platform: Platform.Android,
+  kind: AssetKind.SplashDark,
+  format: Format.Png,
+  width: 3840,
+  height: 2160,
+  density: AndroidDensity.LandTvdpi,
   orientation: Orientation.Landscape,
 };

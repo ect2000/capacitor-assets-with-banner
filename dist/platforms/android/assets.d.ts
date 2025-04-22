@@ -29,8 +29,10 @@ export declare const ANDROID_LAND_XXXHDPI_SCREEN: AndroidOutputAssetTemplateSpla
 /**
  * Splash Android TV 4K (3840×2160), landscape sin escalado por DPI
  */
-export declare const ANDROID_TV_LAND_3840X2160_SPLASH: AndroidOutputAssetTemplateSplash;
-export declare const ANDROID_TV_3840X2160_SPLASH: AndroidOutputAssetTemplateSplash;
+export declare const ANDROID_TV_LAND_NODPI_3840X2160_SPLASH: AndroidOutputAssetTemplateSplash;
+export declare const ANDROID_TV_NODPI_3840X2160_SPLASH: AndroidOutputAssetTemplateSplash;
+export declare const ANDROID_TV_TVDPI_3840X2160_SPLASH: AndroidOutputAssetTemplateSplash;
+export declare const ANDROID_TV_LAND_TVDPI_3840X2160_SPLASH: AndroidOutputAssetTemplateSplash;
 export declare const ANDROID_PORT_LDPI_SCREEN: AndroidOutputAssetTemplateSplash;
 export declare const ANDROID_PORT_MDPI_SCREEN: AndroidOutputAssetTemplateSplash;
 export declare const ANDROID_PORT_HDPI_SCREEN: AndroidOutputAssetTemplateSplash;
@@ -55,3 +57,5 @@ export declare const ANDROID_PORT_XXXHDPI_SCREEN_DARK: AndroidOutputAssetTemplat
  */
 export declare const ANDROID_TV_3840X2160_SPLASH_DARK: AndroidOutputAssetTemplateSplash;
 export declare const ANDROID_TV_LAND_3840X2160_SPLASH_DARK: AndroidOutputAssetTemplateSplash;
+export declare const ANDROID_TV_TVDPI_3840X2160_SPLASH_DARK: AndroidOutputAssetTemplateSplash;
+export declare const ANDROID_TV_LANDTVDPI_3840X2160_SPLASH_DARK: AndroidOutputAssetTemplateSplash;
