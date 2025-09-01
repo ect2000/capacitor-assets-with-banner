@@ -14,7 +14,6 @@
     "capacitor-assets": "./bin/capacitor-assets"
   },
   "scripts": {
-    "prepare": "husky install",
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest --maxWorkers=4",
